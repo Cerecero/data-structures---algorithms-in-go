@@ -25,16 +25,19 @@ func insertInOrder(slice []int, val int) []int{
 	return slice
 }
 
-func linearSearch(arr []int, val int) (int, bool){
-	for i, v := range arr {
+func linearSearch(slice []int, val int) (int, bool){
+
+	//iterate throught the slice
+	for i, v := range slice {
+		// if the value is found return the index and a boolean value
 		if val == v {
 			return i, true
-		}
-
-		if v > val{
+			// If v is greater than the value that we are searching for exit the loop
+		} else if v > val{
 			break
 		}
 	}
+	// return 0 and false if the value is not whiting the array
 	return 0, false
 }
 
