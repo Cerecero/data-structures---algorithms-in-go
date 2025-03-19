@@ -28,7 +28,7 @@ func (s Set) String() string {
 	return fmt.Sprintf("%v", keys)
 }
 
-func main(){
+func main(){  
 	setArr := NewSet()
 
 	setArr.add("Test")
